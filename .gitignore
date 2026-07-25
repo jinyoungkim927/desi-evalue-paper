@@ -1,0 +1,12 @@
+*.log
+*.pyc
+__pycache__/
+.DS_Store
+*.bak
+texput.log
+results/
+figures/
+*.npy
+
+# Session working notes (not for the public repo)
+HANDOFF.md
