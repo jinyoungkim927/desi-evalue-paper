@@ -1,0 +1,67 @@
+n_matched = 11, n_unmatched_dr2 = 2
+
+=== alpha = 1/3 (headline) ===
+identity max |Ay Sy Ay' - consty| = 9.09e-13
+M_joint = 66.71
+K = sqrt(max_g consty_g) = 60.2744
+sqrt(consty_g) over 900 grid pts: min 0.274, median 14.119, 90% 28.446, max 60.274
+argmax grid point: w0 = -0.500, wa = 1.000
+b* = ln(M/20)/K = 0.0200  (Sigma_y^-1 metric)
+c_unif (innovation sigmas) = 4.171 -> s*_innovation = 0.0048
+c_dr2 (published DR2 sigmas) = 5.181 -> s*_DR2sigma = 0.0039
+  b = 0.0500: K-deflator e^Kb = 20.36, sharper mean-deflator = 2.577, M/e^Kb = 3.276, M/mean = 25.88
+  b = 0.1000: K-deflator e^Kb = 414.7, sharper mean-deflator = 10.54, M/e^Kb = 0.1609, M/mean = 6.327
+  b = 0.0200: K-deflator e^Kb = 3.335, sharper mean-deflator = 1.4, M/e^Kb = 20, M/mean = 47.64
+  b = 0.5000: K-deflator e^Kb = 1.226e+13, sharper mean-deflator = 2.085e+10, M/e^Kb = 5.442e-12, M/mean = 3.199e-09
+  b = 1.0000: K-deflator e^Kb = 1.503e+26, sharper mean-deflator = 1.799e+23, M/e^Kb = 4.439e-25, M/mean = 3.709e-22
+sharper breakdown budget (mean-deflator) at a=1/3: b*_sharp = 0.0608, s*_sharp_inn = 0.0146, s*_sharp_DR2 = 0.0117
+
+=== verification of the mixture bound (alpha = 1/3) ===
+  delta along g=899 (argmax g*): ||delta|| = 0.5000, exact E[M_shifted] = 2.079e+10 vs bounds: mean-deflator 2.085e+10, e^Kb = 1.226e+13
+  delta along g=449: ||delta|| = 0.5000, exact E[M_shifted] = 1.816e+10 vs bounds: mean-deflator 2.085e+10, e^Kb = 1.226e+13
+  delta along g=0: ||delta|| = 0.5000, exact E[M_shifted] = 1.241e+05 vs bounds: mean-deflator 2.085e+10, e^Kb = 1.226e+13
+  delta along g=450: ||delta|| = 0.5000, exact E[M_shifted] = 9.028e+04 vs bounds: mean-deflator 2.085e+10, e^Kb = 1.226e+13
+  delta along g=899 (argmax g*): ||delta|| = 0.5000, exact E[M_shifted] = 2.079e+10 vs bounds: mean-deflator 2.085e+10, e^Kb = 1.226e+13
+  max exact E[M_shifted] over worst-case + 2000 random directions (b = 0.5): 2.079e+10 <= e^Kb = 1.226e+13
+  MC E[M_shifted] at worst-case delta (N = 400000): 0.1374 (exact 2.079e+10, bound e^Kb = 1.226e+13)
+  unmatched block (NOT covered by the bound): K_u = sqrt(max constu) = 15.2255
+
+=== family sweep: K(a), b*(a), deflated values ===
+  alpha       M(a)     K(a)    b*(a)  s*_inn  M e^-0.5K  M e^-1.0K
+  0.020        734   72.502   0.0497  0.0118  1.325e-13   2.39e-29
+  0.040      539.6   71.149   0.0463  0.0110  1.915e-13  6.798e-29
+  0.060      406.4   69.874   0.0431  0.0102  2.728e-13  1.832e-28
+  0.080        313   68.675   0.0400  0.0095  3.828e-13  4.683e-28
+  0.100      246.2   67.548   0.0372  0.0088  5.289e-13  1.137e-27
+  0.120      197.5   66.492   0.0344  0.0082  7.193e-13   2.62e-27
+  0.140      161.5   65.508   0.0319  0.0076  9.624e-13  5.736e-27
+  0.160      134.5   64.594   0.0295  0.0070  1.266e-12  1.191e-26
+  0.180      114.1   63.752   0.0273  0.0065  1.636e-12  2.345e-26
+  0.200      98.59   62.985   0.0253  0.0060  2.074e-12  4.365e-26
+  0.220       86.8   62.295   0.0236  0.0056  2.578e-12  7.656e-26
+  0.240      77.94   61.689   0.0221  0.0052  3.134e-12   1.26e-25
+  0.250      74.45   61.420   0.0214  0.0051  3.426e-12  1.576e-25
+  0.260      71.52   61.174   0.0208  0.0050  3.721e-12  1.936e-25
+  0.280      67.23   60.759   0.0200  0.0048  4.304e-12  2.755e-25
+  0.300      65.01   60.460   0.0195  0.0047  4.834e-12  3.594e-25
+  0.320      65.08   60.296   0.0196  0.0047  5.254e-12  4.241e-25
+  0.333      66.71   60.274   0.0200  0.0048  5.442e-12  4.439e-25
+  0.340      68.13   60.295   0.0203  0.0049  5.502e-12  4.444e-25
+  0.360      75.82   60.500   0.0220  0.0053  5.527e-12  4.028e-25
+  0.380      92.47   60.979   0.0251  0.0061  5.303e-12  3.042e-25
+  0.400      131.4   61.854   0.0304  0.0074  4.868e-12  1.803e-25
+  0.420      253.6   63.378   0.0401  0.0098  4.384e-12  7.578e-26
+  0.440       1143   66.305   0.0610  0.0150   4.57e-12  1.828e-26
+  0.460  1.708e+06   76.020   0.1494  0.0372  5.308e-11   1.65e-27
+family-level breakdown (full admissible grid): min_a b*(a) = 0.0195 at a = 0.300
+  family worst case deflated at b = 0.5: inf_a M(a) e^-K(a)b = 1.325e-13 at a = 0.020
+  family worst case deflated at b = 1.0: inf_a M(a) e^-K(a)b = 2.39e-29 at a = 0.020
+family-level breakdown (capped a <= 0.40): min_a b*(a) = 0.0195 at a = 0.300
+  family worst case deflated at b = 0.5: inf_a M(a) e^-K(a)b = 1.325e-13 at a = 0.020
+  family worst case deflated at b = 1.0: inf_a M(a) e^-K(a)b = 2.39e-29 at a = 0.020
+
+selected alphas:
+  a = 0.2500: M = 74.451, K = 61.4196, b* = 0.0214, s*_inn = 0.0051, s*_DR2 = 0.0046
+  a = 0.3000: M = 65.014, K = 60.4600, b* = 0.0195, s*_inn = 0.0047, s*_DR2 = 0.0039
+  a = 0.3333: M = 66.709, K = 60.2744, b* = 0.0200, s*_inn = 0.0048, s*_DR2 = 0.0039
+  a = 0.4000: M = 131.420, K = 61.8535, b* = 0.0304, s*_inn = 0.0074, s*_DR2 = 0.0051

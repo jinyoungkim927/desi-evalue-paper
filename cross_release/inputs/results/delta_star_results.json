@@ -1,0 +1,35 @@
+{
+  "DR2_MLE": {
+    "w0": -0.8556287620860228,
+    "wa": -0.43008262308048684,
+    "chi2_LCDM": 25.38329313394866,
+    "chi2_MLE": 8.522146445587119,
+    "delta_chi2_exact": 16.86114668836154,
+    "delta_chi2_local_gaussian": 16.514553035596887
+  },
+  "Fisher_F": [
+    [
+      4553.857581821929,
+      948.5181868804741
+    ],
+    [
+      948.5181868804741,
+      212.9425035254995
+    ]
+  ],
+  "Fisher_eigvals": [
+    14.73529643199541,
+    4752.064788915433
+  ],
+  "Fisher_sigma_w0": 0.05514556145360358,
+  "Fisher_sigma_wa": 0.25501698510402826,
+  "closed_form_max_rel_error": 0.19137562631521998,
+  "delta_star_lower": 0.8705318434869814,
+  "delta_star_upper": 13.5400866583671,
+  "delta_max": 2.6939332801311995,
+  "M_max": 171.774351226404,
+  "M_numerical_at_delta_star_lower": 22.071469201682884,
+  "M_numerical_at_delta_star_upper": 23.730722182272995,
+  "paper_M_DR2": 33.97,
+  "narrative": "DESI DR2 evidence requires a test specification concentrated within \u03b4* \u2248 0.87-13.54 Fisher-\u03c3 around \u039bCDM to reject at the anytime-valid \u03b1=0.05 level."
+}

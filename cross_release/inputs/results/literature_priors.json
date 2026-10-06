@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Narrow",
+    "M_DR1": 2.595013551822535,
+    "M_DR2": 143.8351617940934,
+    "sup_t": 143.8351617940934,
+    "decision": "REJECT"
+  },
+  {
+    "name": "Default",
+    "M_DR1": 1.0535178490671808,
+    "M_DR2": 33.973791504763966,
+    "sup_t": 33.973791504763966,
+    "decision": "REJECT"
+  },
+  {
+    "name": "Wide",
+    "M_DR1": 0.31992948564710233,
+    "M_DR2": 10.69278950466731,
+    "sup_t": 10.69278950466731,
+    "decision": "no"
+  },
+  {
+    "name": "Ong",
+    "M_DR1": 0.15996281656262937,
+    "M_DR2": 4.814920672223553,
+    "sup_t": 4.814920672223553,
+    "decision": "no"
+  },
+  {
+    "name": "REGROW_delta_1.0",
+    "M_DR1": 2.444591875604563,
+    "M_DR2": 7.581321350676836,
+    "sup_t": 7.581321350676836,
+    "decision": "no"
+  },
+  {
+    "name": "REGROW_delta_2.0",
+    "M_DR1": 6.031241158825764,
+    "M_DR2": 72.52850871436976,
+    "sup_t": 72.52850871436976,
+    "decision": "REJECT"
+  },
+  {
+    "name": "REGROW_delta_3.0",
+    "M_DR1": 6.624499822766497,
+    "M_DR2": 296.8328255745025,
+    "sup_t": 296.8328255745025,
+    "decision": "REJECT"
+  },
+  {
+    "name": "Quintessence_freezing",
+    "M_DR1": null,
+    "M_DR2": 14.805411809077432,
+    "sup_t": 14.805411809077432,
+    "decision": "no",
+    "notes": "centered (-0.85, +0.15); wa sign opposite to DR2 MLE; 320 x 320 grid"
+  },
+  {
+    "name": "Quintessence_thawing_CL_band",
+    "M_DR1": 14.697811965730642,
+    "M_DR2": 1129.0005091921823,
+    "sup_t": 1129.0005091921823,
+    "decision": "REJECT",
+    "notes": "wa in [-3(1+w0), -(1+w0)], w0 in [-1, -0.85]; full Caldwell-Linder band"
+  },
+  {
+    "name": "Round_iso_pm01",
+    "M_DR1": null,
+    "M_DR2": 178.03221349358753,
+    "sup_t": 178.03221349358753,
+    "decision": "REJECT",
+    "notes": "NOT Fisher-shaped; isotropic +/-0.1 around LCDM"
+  },
+  {
+    "name": "Round_iso_pm03",
+    "M_DR1": null,
+    "M_DR2": 81.93857759530538,
+    "sup_t": 81.93857759530538,
+    "decision": "REJECT",
+    "notes": "NOT Fisher-shaped; isotropic +/-0.3 around LCDM"
+  },
+  {
+    "name": "MLE_centered_Fisher",
+    "M_DR1": null,
+    "M_DR2": 2350.6069732366377,
+    "sup_t": 2350.6069732366377,
+    "decision": "REJECT",
+    "notes": "Oracle prior centered at MLE; upper bound on mixture E"
+  }
+]
